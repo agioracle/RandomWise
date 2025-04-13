@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 43% 10%;
+  --foreground: 0 0% 98%;
+  --card: 240 43% 12%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 43% 12%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 252 100% 67%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 43% 15%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 43% 15%;
+  --muted-foreground: 240 5% 84%;
+  --accent: 240 43% 15%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 43% 15%;
+  --input: 240 43% 15%;
+  --ring: 252 100% 67%;
+  --radius: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, hsl(240, 43%, 15%) 0%, hsl(240, 43%, 10%) 100%);
+}
+
+.tool-card {
+  @apply relative p-6 rounded-2xl bg-card hover:bg-secondary transition-all duration-300 cursor-pointer;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  @apply w-12 h-12 mb-4 text-primary;
+}
+
+.testimonial-card {
+  @apply p-6 rounded-2xl bg-card;
+}
