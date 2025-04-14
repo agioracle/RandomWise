@@ -11,13 +11,15 @@ export default function Home() {
   const tools = [
     {
       name: "Flip Coin",
+      slug: "flip-coin",
       image: "/images/coin.png",
       description: "Make a quick yes/no decision with our virtual coin flipper.",
       width: 120,
       height: 120,
     },
     {
-      name: "Spin Wheel",
+      name: "Spin the Wheel",
+      slug: "spin-the-wheel",
       image: "/images/wheel.png",
       description: "Randomly select items or make choices with our customizable spinning wheel.",
       width: 120,
@@ -25,13 +27,15 @@ export default function Home() {
     },
     {
       name: "Roll Dice",
+      slug: "roll-dice",
       image: "/images/dice.png",
       description: "Simulate rolling single or multiple dice for games or random outcomes.",
       width: 120,
       height: 120,
     },
     {
-      name: "Random Number",
+      name: "Random Number Generator",
+      slug: "random-number-generator",
       image: "/images/randnum.png",
       description: "Generate secure random numbers within your specified range.",
       width: 120,
@@ -39,13 +43,23 @@ export default function Home() {
     },
     {
       name: "Rock Paper Scissors",
+      slug: "rock-paper-scissors",
       image: "/images/rps.png",
       description: "Play a quick game of Rock Paper Scissors to settle decisions.",
       width: 120,
       height: 120,
     },
     {
+      name: "Temple Fortune Stick",
+      slug: "temple-fortune-stick",
+      image: "/images/fst.png",
+      description: "Get a random fortune from our collection of 30+ fortunes.",
+      width: 120,
+      height: 120,
+    },
+    {
       name: "Card Picker",
+      slug: "card-picker",
       image: "/images/cards.png",
       description: "Randomly draw one or more cards from a standard 52-card deck.",
       width: 120,
@@ -204,21 +218,23 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {tools.map((tool) => (
-              <Card key={tool.name} className="tool-card flex flex-col items-center justify-center p-4 hover:shadow-lg transition-shadow">
-                <Image
-                  src={tool.image}
-                  alt={tool.name}
-                  width={tool.width}
-                  height={tool.height}
-                  className="w-16 h-16 mb-4 mx-auto"
-                />
-                <h3 className="text-xl font-semibold mb-2 text-center mt-4">{tool.name}</h3>
-                <p className="text-muted-foreground text-left text-sm px-2">{tool.description}</p>
-              </Card>
+              <Link key={tool.name} href={`/tools/${tool.slug}`} className="block hover:no-underline">
+                <Card className="tool-card flex flex-col items-center justify-center p-4 h-full hover:shadow-lg transition-shadow">
+                  <Image
+                    src={tool.image}
+                    alt={tool.name}
+                    width={tool.width}
+                    height={tool.height}
+                    className="w-16 h-16 mb-4 mx-auto"
+                  />
+                  <h3 className="text-xl font-semibold mb-2 text-center mt-4">{tool.name}</h3>
+                  <p className="text-muted-foreground text-left text-sm px-2">{tool.description}</p>
+                </Card>
+              </Link>
             ))}
             {/* View All Tools Card */}
             <Card className="tool-card flex flex-col items-center justify-center p-4 text-center bg-secondary hover:bg-secondary/90 transition-colors h-full">
-              <Link href="/tools" className="flex flex-col items-center justify-center h-full w-full">
+              <Link href="/all-tools" className="flex flex-col items-center justify-center h-full w-full">
                 <LayoutGrid className="w-12 h-12 mb-4 text-primary" />
                 <h3 className="text-xl font-semibold mb-2 text-primary">View All Tools</h3>
                 <p className="text-muted-foreground text-left text-sm px-2">Explore our complete collection of random tools.</p>
@@ -232,13 +248,15 @@ export default function Home() {
       <section className="py-20 px-4 bg-card">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold mb-16 text-center">Features</h2>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
                 <div key={feature.title} className="text-center">
-                  <Icon className="w-10 h-10 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <div className="flex items-center justify-center mb-4">
+                    <Icon className="w-10 h-10 text-primary mr-3" />
+                    <h3 className="text-xl font-semibold">{feature.title}</h3>
+                  </div>
                   <p className="text-left text-muted-foreground">{feature.description}</p>
                 </div>
               );
