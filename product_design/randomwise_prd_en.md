@@ -33,7 +33,6 @@
 | Dice Roll           | Random     | Multiple dice with animated results     | Optional particle effects |
 | Rock Paper Scissors | Game       | Quick duel-style decision game          | Expandable character animation |
 | Random Number Generator        | Random | Random quotes or wisdom snippets        | JSON-based quote pool |
-| Card Picker    | Random | Flying deck → grab a random card        | High visual impact |
 
 > All modules support **sharable result URLs** + optional screenshot/animation export.
 
@@ -43,6 +42,7 @@
 
 | Module Name         | Type       | Special Features                        | Tech Suggestions |
 |---------------------|------------|-----------------------------------------|------------------|
+| Card Picker    | Random | Flying deck → grab a random card        | High visual impact |
 | Mystery Box         | Mystery    | Ask question → animated box reveals result | Animated box interactions |
 | Tarot Deck          | Fortune    | Draw tarot cards + AI-powered meanings  | Card animations / GPT integration |
 | Crystal Gem Light   | Emotion    | Draw light-infused cards with meaning   | Expandable glow animations |
