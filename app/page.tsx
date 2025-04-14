@@ -3,16 +3,18 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Sun, Settings2, CircleSlash, Menu, X, LayoutGrid } from "lucide-react";
+import { Sun, Settings2, CircleSlash, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   const tools = [
     {
       name: "Flip Coin",
       slug: "flip-coin",
-      image: "/images/coin.png",
+      image: "/images/coin-heads.png",
       description: "Make a quick yes/no decision with our virtual coin flipper.",
       width: 120,
       height: 120,
@@ -133,60 +135,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold" onClick={() => setIsMobileMenuOpen(false)}>
-            RandomWise
-          </Link>
-          {/* Desktop Menu Links */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="/tools" className="hover:text-primary transition-colors">
-              All Tools
-            </Link>
-            <Link href="/ask-decidely" className="hover:text-primary transition-colors">
-              Ask Decidely
-            </Link>
-            <Link href="/blog" className="hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link href="/about" className="hover:text-primary transition-colors">
-              About
-            </Link>
-          </div>
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={toggleMobileMenu}>
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </div>
-        </div>
-        {/* Mobile Menu Overlay */}
-        {isMobileMenuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-background shadow-md md:hidden">
-            <div className="container mx-auto px-4 py-4 flex flex-col items-center gap-4">
-              <Link href="/" className="hover:text-primary transition-colors w-full text-center py-2" onClick={toggleMobileMenu}>
-                Home
-              </Link>
-              <Link href="/tools" className="hover:text-primary transition-colors w-full text-center py-2" onClick={toggleMobileMenu}>
-                All Tools
-              </Link>
-              <Link href="/ask-decidely" className="hover:text-primary transition-colors w-full text-center py-2" onClick={toggleMobileMenu}>
-                Ask Decidely
-              </Link>
-              <Link href="/blog" className="hover:text-primary transition-colors w-full text-center py-2" onClick={toggleMobileMenu}>
-                Blog
-              </Link>
-              <Link href="/about" className="hover:text-primary transition-colors w-full text-center py-2" onClick={toggleMobileMenu}>
-                About
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="hero-gradient pt-32 pb-20 px-4 relative overflow-hidden">
@@ -291,16 +240,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-muted text-muted-foreground py-8 px-4 mt-auto">
-        <div className="container mx-auto text-center">
-          <p className="mb-4">&copy; {new Date().getFullYear()} RandomWise. All rights reserved.</p>
-          <div className="flex justify-center gap-4">
-            <Link href="/privacy" className="text-sm hover:text-primary transition-colors">Privacy Policy</Link>
-            <span className="text-sm">|</span>
-            <Link href="/terms" className="text-sm hover:text-primary transition-colors">Terms of Service</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
