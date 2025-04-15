@@ -208,7 +208,7 @@ export default function RandomNumberPage() {
 
             {/* Display last 10 results */}
             <div className="mt-4">
-              <p className="mb-2">Last 8 results:</p>
+              <p className="mb-2">Last results:</p>
               <div className="flex flex-wrap justify-center gap-2">
                 {resultHistory.map((num, index) => (
                   <span
