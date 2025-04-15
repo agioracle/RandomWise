@@ -167,7 +167,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {tools.map((tool) => (
-              <Link key={tool.name} href={`/tools/${tool.slug}`} className="block hover:no-underline">
+              <Link key={tool.name} href={`/${tool.slug}`} className="block hover:no-underline">
                 <Card className="tool-card flex flex-col items-center justify-center p-4 h-full hover:shadow-lg transition-shadow">
                   <Image
                     src={tool.image}
