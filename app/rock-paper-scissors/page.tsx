@@ -9,6 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { getToolBySlug } from "@/data/tools";
+import { ToolIntroduction } from "@/components/tool-introduction";
 
 export default function RockPaperScissorsPage() {
   // Get current tool information
@@ -235,6 +236,9 @@ export default function RockPaperScissorsPage() {
           </div>
         )}
       </main>
+
+      {/* SEO Introduction */}
+      <ToolIntroduction slug="rock-paper-scissors" />
 
       {/* Footer */}
       <Footer className="bg-[#0A0A1B] text-gray-400" />

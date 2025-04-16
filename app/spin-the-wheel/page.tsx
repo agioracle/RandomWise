@@ -13,6 +13,7 @@ import { X, Plus, Settings, Palette } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useMediaQuery } from "../../hooks/use-media-query";
 import { getToolBySlug } from "@/data/tools";
+import { ToolIntroduction } from "@/components/tool-introduction";
 
 interface WheelOption {
   text: string;
@@ -627,6 +628,9 @@ export default function SpinTheWheelPage() {
           </div>
         )}
       </main>
+
+      {/* SEO Introduction */}
+      <ToolIntroduction slug="spin-the-wheel" />
 
       {/* Footer */}
       <Footer className="bg-[#0A0A1B] text-gray-400" />

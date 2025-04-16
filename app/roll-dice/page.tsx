@@ -7,6 +7,7 @@ import { Switch } from "@/components/ui/switch";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { getToolBySlug } from "@/data/tools";
+import { ToolIntroduction } from "@/components/tool-introduction";
 
 // Define dice types with their sides and colors
 const diceTypes = [
@@ -327,6 +328,9 @@ export default function RollDicePage() {
           </div>
         )}
       </main>
+
+      {/* SEO Introduction */}
+      <ToolIntroduction slug="roll-dice" />
 
       {/* Footer */}
       <Footer className="bg-[#0A0A1B] text-gray-400" />

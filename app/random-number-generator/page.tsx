@@ -8,6 +8,7 @@ import { Switch } from "@/components/ui/switch";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { getToolBySlug } from "@/data/tools";
+import { ToolIntroduction } from "@/components/tool-introduction";
 
 export default function RandomNumberPage() {
   // Get current tool information
@@ -227,6 +228,9 @@ export default function RandomNumberPage() {
           </div>
         )}
       </main>
+
+      {/* SEO Introduction */}
+      <ToolIntroduction slug="random-number-generator" />
 
       {/* Footer */}
       <Footer className="bg-[#0A0A1B] text-gray-400" />

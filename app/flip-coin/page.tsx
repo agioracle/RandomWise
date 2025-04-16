@@ -9,10 +9,13 @@ import { Switch } from "@/components/ui/switch";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { getToolBySlug } from "@/data/tools";
+import { getToolIntroductionBySlug } from "@/data/tool-introductions";
+import { ToolIntroduction } from "@/components/tool-introduction";
 
 export default function FlipCoinPage() {
   // Get current tool information
   const currentTool = getToolBySlug('flip-coin');
+  const toolIntroduction = getToolIntroductionBySlug('flip-coin');
   
   // State for coin flip
   const [result, setResult] = useState<'Heads' | 'Tails' | null>(null);
@@ -134,6 +137,9 @@ export default function FlipCoinPage() {
           </div>
         )}
       </main>
+
+      {/* SEO Introduction */}
+      <ToolIntroduction slug="flip-coin" />
 
       {/* Footer */}
       <Footer className="bg-[#0A0A1B] text-gray-400" />
