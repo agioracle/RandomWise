@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { getToolBySlug } from "@/data/tools";
 
 // Define dice types with their sides and colors
 const diceTypes = [
@@ -18,6 +19,9 @@ const diceTypes = [
 ];
 
 export default function RollDicePage() {
+  // Get current tool information
+  const currentTool = getToolBySlug('roll-dice');
+
   // State for dice roll
   const [selectedDiceType, setSelectedDiceType] = useState<string>('d6'); // Default to d6 dice
   const [diceCount, setDiceCount] = useState<number>(2); // Default to 2 dice
@@ -167,7 +171,7 @@ export default function RollDicePage() {
         </div>
       );
     }
-    
+
     // For all other dice, render a simple 2D shape with rotation animation
     return (
       <div
@@ -197,8 +201,8 @@ export default function RollDicePage() {
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Roll Dice</h1>
-        <p className="text-xl text-gray-300 mb-12">Roll virtual dice for games or random decisions.</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{currentTool?.name || 'Roll Dice'}</h1>
+        <p className="text-xl text-gray-300 mb-12">{currentTool?.description || 'Roll virtual dice for games or random decisions.'}</p>
 
         {/* Dice Roll Card */}
         <Card className="w-full max-w-md bg-[#1A1A3A] border-[#3D3D6B] text-white rounded-xl overflow-hidden">
@@ -232,7 +236,7 @@ export default function RollDicePage() {
           {/* Customize Options */}
           {showCustomize && (
             <div className="border-t border-[#3D3D6B] px-8 py-4">
-              <h3 className="text-lg font-semibold mb-3">Select Dice</h3>
+              <h3 className="text-lg font-semibold mb-3">Select Dice Type</h3>
               <div className="flex flex-wrap justify-center gap-2 mb-4">
                 {diceTypes.map((dice) => (
                   <button
@@ -256,7 +260,7 @@ export default function RollDicePage() {
               <div className="mt-4 mb-2">
                 <h3 className="text-lg font-semibold mb-3">Number of Dice</h3>
                 <div className="flex items-center justify-center gap-4">
-                  <button 
+                  <button
                     onClick={decreaseDiceCount}
                     disabled={diceCount <= 1}
                     className={`w-10 h-10 rounded-full flex items-center justify-center ${diceCount <= 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#3D3D6B]'}`}
@@ -264,7 +268,7 @@ export default function RollDicePage() {
                     <span className="text-2xl">-</span>
                   </button>
                   <span className="text-xl font-bold">{diceCount}</span>
-                  <button 
+                  <button
                     onClick={increaseDiceCount}
                     disabled={diceCount >= 5}
                     className={`w-10 h-10 rounded-full flex items-center justify-center ${diceCount >= 5 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#3D3D6B]'}`}
@@ -343,7 +347,7 @@ export default function RollDicePage() {
           transform-style: preserve-3d;
           transition: transform 0.3s ease-out;
         }
-        
+
         .dice-simple {
           width: 100%;
           height: 100%;
@@ -362,7 +366,7 @@ export default function RollDicePage() {
           animation: dice-roll 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Reduced from 2s to 800ms */
           transform-style: preserve-3d;
         }
-        
+
         .simple-animate-roll {
           animation: simple-dice-roll 800ms ease-out; /* Reduced from 2s to 800ms */
         }
@@ -384,7 +388,7 @@ export default function RollDicePage() {
           border-radius: 5px;
           text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
-        
+
         .dice-simple-face {
           width: 100%;
           height: 100%;
@@ -428,19 +432,19 @@ export default function RollDicePage() {
         .dice-d4 .dice-simple-face {
           clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
         }
-        
+
         .dice-d8 .dice-simple-face {
           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         }
-        
+
         .dice-d10 .dice-simple-face {
           clip-path: polygon(50% 0%, 80% 30%, 80% 70%, 50% 100%, 20% 70%, 20% 30%);
         }
-        
+
         .dice-d12 .dice-simple-face {
           clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
         }
-        
+
         .dice-d20 .dice-simple-face {
           clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
         }

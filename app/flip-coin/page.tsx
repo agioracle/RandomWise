@@ -8,8 +8,12 @@ import Image from "next/image";
 import { Switch } from "@/components/ui/switch";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { getToolBySlug } from "@/data/tools";
 
 export default function FlipCoinPage() {
+  // Get current tool information
+  const currentTool = getToolBySlug('flip-coin');
+  
   // State for coin flip
   const [result, setResult] = useState<'Heads' | 'Tails' | null>(null);
   const [isFlipping, setIsFlipping] = useState<boolean>(false);
@@ -57,8 +61,8 @@ export default function FlipCoinPage() {
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Flip a Coin</h1>
-        <p className="text-xl text-gray-300 mb-12">Toss a virtual coin to decide between options.</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{currentTool?.name || 'Flip a Coin'}</h1>
+        <p className="text-xl text-gray-300 mb-12">{currentTool?.description || 'Toss a virtual coin to decide between options.'}</p>
 
         {/* Coin Flip Card */}
         <Card className="w-full max-w-md bg-[#1A1A3A] border-[#3D3D6B] text-white rounded-xl overflow-hidden">

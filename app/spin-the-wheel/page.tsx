@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { X, Plus, Settings, Palette } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useMediaQuery } from "../../hooks/use-media-query";
+import { getToolBySlug } from "@/data/tools";
 
 interface WheelOption {
   text: string;
@@ -54,6 +55,9 @@ const wheelTemplates = {
 };
 
 export default function SpinTheWheelPage() {
+  // Get current tool information
+  const currentTool = getToolBySlug('spin-the-wheel');
+  
   // State for wheel spinning
   const [isSpinning, setIsSpinning] = useState<boolean>(false);
   const [result, setResult] = useState<string | null>(null);
@@ -355,8 +359,8 @@ export default function SpinTheWheelPage() {
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Spinning your wheels?</h1>
-        <p className="text-xl text-gray-300 mb-12">Let the wheel determine your next move!</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{currentTool?.name || 'Spinning your wheels?'}</h1>
+        <p className="text-xl text-gray-300 mb-12">{currentTool?.description || 'Let the wheel determine your next move!'}</p>
 
         <div className="flex flex-col md:flex-row w-full max-w-5xl gap-6">
           {isCustomizing && !isMobile ? (
