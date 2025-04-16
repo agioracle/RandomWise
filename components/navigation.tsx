@@ -27,7 +27,7 @@ export function Navigation({ className = "" }: NavigationProps) {
           <Link href="/" className="hover:text-primary transition-colors">
             Home
           </Link>
-          <Link href="/tools" className="hover:text-primary transition-colors">
+          <Link href="/all-tools" className="hover:text-primary transition-colors">
             All Tools
           </Link>
           <Link href="/ask-decidely" className="hover:text-primary transition-colors">
@@ -49,30 +49,30 @@ export function Navigation({ className = "" }: NavigationProps) {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-background shadow-md py-4 px-4">
           <div className="flex flex-col space-y-4">
-            <Link 
-              href="/" 
-              className="text-foreground/80 hover:text-primary transition-colors block" 
+            <Link
+              href="/"
+              className="text-foreground/80 hover:text-primary transition-colors block"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
-            <Link 
-              href="/tools" 
-              className="text-foreground/80 hover:text-primary transition-colors block" 
+            <Link
+              href="/all-tools"
+              className="text-foreground/80 hover:text-primary transition-colors block"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               All Tools
             </Link>
-            <Link 
-              href="/ask-decidely" 
-              className="text-foreground/80 hover:text-primary transition-colors block" 
+            <Link
+              href="/ask-decidely"
+              className="text-foreground/80 hover:text-primary transition-colors block"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Ask Decidely
             </Link>
-            <Link 
-              href="/blog" 
-              className="text-foreground/80 hover:text-primary transition-colors block" 
+            <Link
+              href="/blog"
+              className="text-foreground/80 hover:text-primary transition-colors block"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Blog
