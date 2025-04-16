@@ -19,12 +19,13 @@ const diceTypes = [
 
 export default function RollDicePage() {
   // State for dice roll
-  const [selectedDice, setSelectedDice] = useState<string[]>(['d6', 'd6']); // Default to two d6 dice
+  const [selectedDiceType, setSelectedDiceType] = useState<string>('d6'); // Default to d6 dice
+  const [diceCount, setDiceCount] = useState<number>(2); // Default to 2 dice
   const [results, setResults] = useState<number[]>([]);
   const [isRolling, setIsRolling] = useState<boolean>(false);
   const [soundEnabled, setSoundEnabled] = useState<boolean>(false);
   const [rollCount, setRollCount] = useState<number>(0);
-  const [rollHistory, setRollHistory] = useState<{dice: string[], results: number[]}[]>([]);
+  const [rollHistory, setRollHistory] = useState<{diceType: string, count: number, results: number[]}[]>([]);
   const [showCustomize, setShowCustomize] = useState<boolean>(false);
 
   // Animation references
@@ -51,8 +52,8 @@ export default function RollDicePage() {
     }
 
     // Generate final results
-    const finalResults = selectedDice.map(dice => {
-      const { sides } = getDiceDetails(dice);
+    const finalResults = Array(diceCount).fill(0).map(() => {
+      const { sides } = getDiceDetails(selectedDiceType);
       return Math.floor(Math.random() * sides) + 1;
     });
 
@@ -80,8 +81,8 @@ export default function RollDicePage() {
 
       if (progress < 1) {
         // Generate random numbers for display during animation
-        const animationResults = selectedDice.map(dice => {
-          const { sides } = getDiceDetails(dice);
+        const animationResults = Array(diceCount).fill(0).map(() => {
+          const { sides } = getDiceDetails(selectedDiceType);
           return Math.floor(Math.random() * sides) + 1;
         });
 
@@ -96,7 +97,7 @@ export default function RollDicePage() {
         // Add to history (keeping only the last 8 results)
         setRollHistory(prev => {
           const newHistory = [
-            { dice: [...selectedDice], results: [...finalResultsRef.current] },
+            { diceType: selectedDiceType, count: diceCount, results: [...finalResultsRef.current] },
             ...prev
           ];
           return newHistory.slice(0, 8);
@@ -112,34 +113,30 @@ export default function RollDicePage() {
     animationRef.current = requestAnimationFrame(animateRolling);
   };
 
-  // Toggle dice selection
-  const toggleDice = (diceId: string) => {
-    if (selectedDice.includes(diceId)) {
-      // If we have more than one dice, allow removal
-      if (selectedDice.length > 1) {
-        setSelectedDice(selectedDice.filter(id => id !== diceId));
-      }
-    } else {
-      // Add the dice if we have less than 5
-      if (selectedDice.length < 5) {
-        setSelectedDice([...selectedDice, diceId]);
-      }
+  // Select dice type
+  const selectDiceType = (diceId: string) => {
+    setSelectedDiceType(diceId);
+  };
+
+  // Increase dice count
+  const increaseDiceCount = () => {
+    if (diceCount < 5) { // Maximum 5 dice
+      setDiceCount(diceCount + 1);
+    }
+  };
+
+  // Decrease dice count
+  const decreaseDiceCount = () => {
+    if (diceCount > 1) { // Minimum 1 die
+      setDiceCount(diceCount - 1);
     }
   };
 
   // Reset to default dice selection
   const resetDice = () => {
-    setSelectedDice(['d6', 'd6']);
+    setSelectedDiceType('d6');
+    setDiceCount(2);
   };
-
-  // Clean up animation on unmount
-  useEffect(() => {
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, []);
 
   // Render a die with the appropriate shape and number
   const renderDie = (diceId: string, result: number, index: number) => {
@@ -208,8 +205,8 @@ export default function RollDicePage() {
           {/* Dice Display Area */}
           <div className="p-8 flex flex-wrap justify-center items-center">
             <div className="dice-container relative flex flex-wrap justify-center">
-              {selectedDice.map((diceId, index) => (
-                renderDie(diceId, results[index] || (isRolling ? '?' : (index === 0 ? 5 : 2)), index)
+              {Array(diceCount).fill(0).map((_, index) => (
+                renderDie(selectedDiceType, results[index] || (isRolling ? '?' : (index === 0 ? 5 : 2)), index)
               ))}
             </div>
           </div>
@@ -240,9 +237,9 @@ export default function RollDicePage() {
                 {diceTypes.map((dice) => (
                   <button
                     key={dice.id}
-                    onClick={() => toggleDice(dice.id)}
+                    onClick={() => selectDiceType(dice.id)}
                     className={`p-2 rounded-md transition-all ${
-                      selectedDice.includes(dice.id)
+                      selectedDiceType === dice.id
                         ? 'ring-2 ring-white scale-110'
                         : 'opacity-70 hover:opacity-100'
                     }`}
@@ -255,6 +252,26 @@ export default function RollDicePage() {
                     </div>
                   </button>
                 ))}
+              </div>
+              <div className="mt-4 mb-2">
+                <h3 className="text-lg font-semibold mb-3">Number of Dice</h3>
+                <div className="flex items-center justify-center gap-4">
+                  <button 
+                    onClick={decreaseDiceCount}
+                    disabled={diceCount <= 1}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center ${diceCount <= 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#3D3D6B]'}`}
+                  >
+                    <span className="text-2xl">-</span>
+                  </button>
+                  <span className="text-xl font-bold">{diceCount}</span>
+                  <button 
+                    onClick={increaseDiceCount}
+                    disabled={diceCount >= 5}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center ${diceCount >= 5 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#3D3D6B]'}`}
+                  >
+                    <span className="text-2xl">+</span>
+                  </button>
+                </div>
               </div>
               <div className="flex justify-end">
                 <Button
@@ -295,6 +312,7 @@ export default function RollDicePage() {
                     key={historyIndex}
                     className={`inline-flex gap-1 px-3 py-1 rounded-full ${historyIndex === 0 ? 'bg-[#6C5DD3] text-white' : 'bg-[#2A2A4A] text-gray-300'}`}
                   >
+                    <span className="font-semibold">{roll.count}×{roll.diceType.substring(1)}</span>:
                     {roll.results.map((result, i) => (
                       <span key={i}>{result}</span>
                     )).reduce((prev, curr) => prev === null ? curr : <>{prev}, {curr}</>, null)}
