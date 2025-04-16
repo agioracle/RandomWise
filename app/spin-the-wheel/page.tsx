@@ -633,7 +633,7 @@ export default function SpinTheWheelPage() {
 
       {/* Dialog */}
       <Dialog open={dialogOpen} onOpenChange={handleDialogOpenChange}>
-        <DialogContent className="bg-[#1A1A3A] border-[#3D3D6B] text-white rounded-xl overflow-hidden">
+        <DialogContent className="bg-[#1A1A3A] border-[#3D3D6B] text-white rounded-xl overflow-hidden max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <div className="flex justify-between items-center">
               <DialogTitle>Customize Wheel</DialogTitle>
