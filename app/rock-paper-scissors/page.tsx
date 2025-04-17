@@ -34,8 +34,8 @@ export default function RockPaperScissorsPage() {
   const choices = ['rock', 'paper', 'scissors'];
 
   const getChoiceImage = (choice: 'rock' | 'paper' | 'scissors' | null) => {
-    if (!choice) return '/images/rps.png';
-    return `/images/${choice}.png`;
+    if (!choice) return '/images/rps.webp';
+    return `/images/${choice}.webp`;
   };
 
   const determineWinner = (user: 'rock' | 'paper' | 'scissors', computer: 'rock' | 'paper' | 'scissors') => {
@@ -181,21 +181,21 @@ export default function RockPaperScissorsPage() {
               disabled={isPlaying}
               className="bg-[#6C5DD3] hover:bg-[#5A4BBF] text-white py-4"
             >
-              <Image src="/images/rock.png" alt="Rock" width={40} height={40} className="mx-auto" />
+              <Image src="/images/rock.webp" alt="Rock" width={40} height={40} className="mx-auto" />
             </Button>
             <Button
               onClick={() => playGame('paper')}
               disabled={isPlaying}
               className="bg-[#6C5DD3] hover:bg-[#5A4BBF] text-white py-4"
             >
-              <Image src="/images/paper.png" alt="Paper" width={40} height={40} className="mx-auto" />
+              <Image src="/images/paper.webp" alt="Paper" width={40} height={40} className="mx-auto" />
             </Button>
             <Button
               onClick={() => playGame('scissors')}
               disabled={isPlaying}
               className="bg-[#6C5DD3] hover:bg-[#5A4BBF] text-white py-4"
             >
-              <Image src="/images/scissors.png" alt="Scissors" width={40} height={40} className="mx-auto" />
+              <Image src="/images/scissors.webp" alt="Scissors" width={40} height={40} className="mx-auto" />
             </Button>
           </div>
 

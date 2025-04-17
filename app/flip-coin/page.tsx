@@ -16,7 +16,7 @@ export default function FlipCoinPage() {
   // Get current tool information
   const currentTool = getToolBySlug('flip-coin');
   const toolIntroduction = getToolIntroductionBySlug('flip-coin');
-  
+
   // State for coin flip
   const [result, setResult] = useState<'Heads' | 'Tails' | null>(null);
   const [isFlipping, setIsFlipping] = useState<boolean>(false);
@@ -76,7 +76,7 @@ export default function FlipCoinPage() {
                 className={`relative w-full h-full ${isFlipping ? 'animate-flip' : ''}`}
               >
                 <Image
-                  src={result === 'Heads' || (!result && !isFlipping) ? '/images/coin-heads.png' : '/images/coin-tails.png'}
+                  src={result === 'Heads' || (!result && !isFlipping) ? '/images/coin-heads.webp' : '/images/coin-tails.webp'}
                   alt={result || 'Coin'}
                   width={192}
                   height={192}

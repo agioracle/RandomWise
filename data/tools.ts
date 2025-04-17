@@ -4,7 +4,7 @@ export const tools = [
   {
     name: "Flip Coin",
     slug: "flip-coin",
-    image: "/images/coin-heads.png",
+    image: "/images/coin-heads.webp",
     description: "Easy & fun random decision tool for quick yes/no choices with a virtual coin flip.",
     width: 120,
     height: 120,
@@ -12,7 +12,7 @@ export const tools = [
   {
     name: "Spin the Wheel",
     slug: "spin-the-wheel",
-    image: "/images/wheel.png",
+    image: "/images/wheel.webp",
     description: "Fun decision-making tool with a customizable wheel for random selection among multiple options.",
     width: 120,
     height: 120,
@@ -20,7 +20,7 @@ export const tools = [
   {
     name: "Roll Dice",
     slug: "roll-dice",
-    image: "/images/dice.png",
+    image: "/images/dice.webp",
     description: "Easy & fun virtual dice roller for random decision-making in games and everyday choices.",
     width: 120,
     height: 120,
@@ -28,7 +28,7 @@ export const tools = [
   {
     name: "Random Number Generator",
     slug: "random-number-generator",
-    image: "/images/randnum.png",
+    image: "/images/randnum.webp",
     description: "Simple decision-making tool that generates random numbers within your specified range.",
     width: 120,
     height: 120,
@@ -36,7 +36,7 @@ export const tools = [
   {
     name: "Rock Paper Scissors",
     slug: "rock-paper-scissors",
-    image: "/images/rps.png",
+    image: "/images/rps.webp",
     description: "Fun & easy random decision game to quickly settle choices with the classic Rock Paper Scissors.",
     width: 120,
     height: 120,
@@ -44,7 +44,7 @@ export const tools = [
   {
     name: "Temple Fortune Stick",
     slug: "temple-fortune-stick",
-    image: "/images/fst.png",
+    image: "/images/fst.webp",
     description: "Fun random fortune-telling tool with 30+ fortunes to guide your decisions and future.",
     width: 120,
     height: 120,
@@ -52,7 +52,7 @@ export const tools = [
   {
     name: "Card Picker",
     slug: "card-picker",
-    image: "/images/cards.png",
+    image: "/images/cards.webp",
     description: "Easy & fun random decision tool that draws cards from a standard deck for games or choices.",
     width: 120,
     height: 120,
