@@ -144,7 +144,7 @@ export default function RollDicePage() {
   };
 
   // Render a die with the appropriate shape and number
-  const renderDie = (diceId: string, result: number, index: number) => {
+  const renderDie = (diceId: string, result: number | string, index: number) => {
     const { color, shape, sides } = getDiceDetails(diceId);
 
     // For d6 (cube), render all faces in 3D
