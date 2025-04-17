@@ -67,7 +67,7 @@ export default function SpinTheWheelPage() {
   const [wheelOptions, setWheelOptions] = useState<WheelOption[]>(wheelTemplates.default);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCustomizing, setIsCustomizing] = useState(false);
-  const [newOption, setNewOption] = useState({ text: "", color: "#6C5DD3", icon: "" });
+  const [newOption, setNewOption] = useState<WheelOption>({ text: "", color: "#6C5DD3", icon: "" });
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [currentRotation, setCurrentRotation] = useState<number>(0);
@@ -309,7 +309,11 @@ export default function SpinTheWheelPage() {
   };
 
   const startEditOption = (index: number) => {
-    setNewOption({ ...wheelOptions[index] });
+    // Ensure icon is always a string, defaulting to empty string if undefined
+    setNewOption({ 
+      ...wheelOptions[index], 
+      icon: wheelOptions[index].icon || "" 
+    });
     setEditingIndex(index);
   };
 
