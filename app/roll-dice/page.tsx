@@ -318,9 +318,12 @@ export default function RollDicePage() {
                     className={`inline-flex gap-1 px-3 py-1 rounded-full ${historyIndex === 0 ? 'bg-[#6C5DD3] text-white' : 'bg-[#2A2A4A] text-gray-300'}`}
                   >
                     <span className="font-semibold">{roll.count}×{roll.diceType.substring(1)}</span>:
-                    {roll.results.map((result, i) => (
-                      <span key={i}>{result}</span>
-                    )).reduce((prev, curr) => prev === null ? curr : <>{prev}, {curr}</>, null)}
+                    {roll.results.length > 0 ? roll.results.map((result, i) => (
+                      <React.Fragment key={i}>
+                        {i > 0 && ', '}
+                        <span>{result}</span>
+                      </React.Fragment>
+                    )) : null}
                   </div>
                 ))}
               </div>
