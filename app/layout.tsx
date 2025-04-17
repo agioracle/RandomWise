@@ -5,8 +5,34 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'RandomWise - Make Better Decisions Using Fun Random Tools',
-  description: 'Get unstuck with our selection of randomizing tools! Flip coins, spin wheels, roll dice, and more.',
+  title: 'RandomWise - Make Quick Decisions Using Free Random Tools',
+  description: 'make decisions easy & fun with our complete collection of free random tools',
+  keywords: 'random tools, quick decisions, easy decisions, fun decisions, randomizing tools, decision-making tools, random generator, randomizer, coin flip, spin wheel, roll dice, random number generator, rock paper scissors, fortune teller, card picker',
+  authors: [{ name: 'Agi' }],
+  publisher: 'Agi',
+  alternates: {
+    canonical: 'https://randomwise.ai',
+  },
+  openGraph: {
+    title: 'RandomWise - Make Quick Decisions Using Free Random Tools',
+    description: 'make decisions easy & fun with our complete collection of free random tools',
+    type: 'website',
+    url: 'https://randomwise.ai',
+    siteName: 'RandomWise',
+  },
+  twitter: {
+    title: 'RandomWise - Make Quick Decisions Using Free Random Tools',
+    description: 'make decisions easy & fun with our complete collection of free random tools',
+    card: 'summary_large_image',
+    site: '@randomwise',
+    creator: '@randomwise',
+  },
+  icons: {
+    icon: '/icons/randomwise.ico',
+    shortcut: '/icons/randomwise.ico',
+    apple: '/icons/randomwise.webp',
+  },
+  manifest: '/icons/randomwise.ico',
 };
 
 export default function RootLayout({

@@ -19,7 +19,7 @@ export default function AllToolsPage() {
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">All Tools</h1>
-        <p className="text-xl text-gray-300 mb-12">Explore our complete collection of random tools.</p>
+        <p className="text-xl text-gray-300 mb-12">Explore our complete collection of random tools for quick decision-making.</p>
 
         {/* Tools Grid */}
         <div className="container mx-auto">
@@ -46,8 +46,8 @@ export default function AllToolsPage() {
 
         {/* Back to Home */}
         <div className="mt-16">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="text-[#6C5DD3] hover:text-[#5A4BBF] flex items-center justify-center"
           >
             <span className="mr-2">←</span> Back to Home

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 interface NavigationProps {
   className?: string;
@@ -19,7 +20,13 @@ export function Navigation({ className = "" }: NavigationProps) {
   return (
     <nav className={`fixed w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ${className}`}>
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link href="/" className="text-2xl font-bold flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+          <Image 
+            src="/icons/randomwise.ico" 
+            alt="RandomWise Icon" 
+            width={24} 
+            height={24} 
+          />
           RandomWise
         </Link>
         {/* Desktop Menu Links */}
