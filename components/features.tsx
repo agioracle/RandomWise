@@ -5,7 +5,7 @@ const featuresList = [
   {
     icon: Sun,
     title: "Quick & Easy",
-    description: "Make 'wise' decisions in seconds with our user-friendly and fun random tools.",
+    description: "Make decisions in seconds with our user-friendly and fun random tools.",
   },
   {
     icon: Settings2,
