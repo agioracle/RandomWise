@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const BASE_URL = 'https://randomwise.tools'; // Replace with your actual domain
+const BASE_URL = 'https://ranwomwise.app'; // Replace with your actual domain
 
 export async function GET() {
   const staticPages = [

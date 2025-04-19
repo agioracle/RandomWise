@@ -6,20 +6,20 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://randomwise.tools'),
+  metadataBase: new URL('https://ranwomwise.app'),
   title: 'RandomWise - Make Quick Decisions Using Free Random Tools',
   description: 'make decisions easy & fun with our complete collection of free random tools',
   keywords: 'random tools, quick decisions, easy decisions, fun decisions, randomizing tools, decision-making tools, random generator, randomizer, coin flip, spin wheel, roll dice, random number generator, rock paper scissors, fortune teller, card picker',
   authors: [{ name: 'Agi' }],
   publisher: 'RandomWise',
   alternates: {
-    canonical: 'https://randomwise.tools',
+    canonical: 'https://ranwomwise.app',
   },
   openGraph: {
     title: 'RandomWise - Make Quick Decisions Using Free Random Tools',
     description: 'make decisions easy & fun with our complete collection of free random tools',
     type: 'website',
-    url: 'https://randomwise.tools',
+    url: 'https://ranwomwise.app',
     siteName: 'RandomWise',
     images: [
       {

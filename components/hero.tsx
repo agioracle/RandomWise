@@ -29,7 +29,7 @@ export function Hero() {
               className="px-6 py-3 rounded-lg border border-primary text-primary font-semibold bg-white shadow hover:bg-primary/10 transition flex items-center gap-2"
             >
               <MessageCircle className="w-5 h-5" />
-              Ask Dicidely
+              Ask Dicidely(Coming Soon)
             </a>
           </div>
           <div className="flex flex-col items-center md:items-start mt-6">
