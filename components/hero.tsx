@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { tools } from "@/data/tools";
-import { LayoutGrid, MessageCircle } from "lucide-react";
+import { LayoutGrid, MessageCircle, Twitter, Facebook, Linkedin, Send } from "lucide-react";
+import { SiDiscord, SiWhatsapp, SiTelegram, SiInstagram } from "react-icons/si";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 export function Hero() {
   return (
@@ -29,6 +31,9 @@ export function Hero() {
               <MessageCircle className="w-5 h-5" />
               Ask Dicidely
             </a>
+          </div>
+          <div className="flex flex-col items-center md:items-start mt-6">
+            <SocialShareButtons />
           </div>
         </div>
         <div className="flex-shrink-0 flex justify-center md:justify-end items-center md:ml-12">

@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 // Helper to get all article filenames
 function getArticleSlugs() {
@@ -39,7 +40,10 @@ export default function BlogListPage() {
       <Navigation />
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Blog</h1>
-        <p className="text-xl text-gray-300 mb-12">Read latest articles and updates from RandomWise.</p>
+        <p className="text-xl text-gray-300 mb-2">Read latest articles and updates from RandomWise.</p>
+        <div className="flex flex-col items-center md:items-start mb-8">
+          <SocialShareButtons />
+        </div>
         <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
           {articles.map((article) => (
             <Card key={article.slug} className="bg-[#1A1A3A] border-[#3D3D6B] text-white rounded-xl overflow-hidden flex flex-col">

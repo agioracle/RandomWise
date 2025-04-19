@@ -8,6 +8,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { getToolBySlug } from "@/data/tools";
 import { ToolIntroduction } from "@/components/tool-introduction";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 // Define dice types with their sides and colors
 const diceTypes = [
@@ -203,7 +204,11 @@ export default function RollDicePage() {
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{currentTool?.name || 'Roll Dice'}</h1>
-        <p className="text-xl text-gray-300 mb-12">{currentTool?.description || 'Roll virtual dice for games or random decisions.'}</p>
+        <p className="text-xl text-gray-300 mb-2">{currentTool?.description || 'Roll virtual dice for games or random decisions.'}</p>
+
+        <div className="flex flex-col items-center md:items-start mb-8">
+          <SocialShareButtons />
+        </div>
 
         {/* Dice Roll Card */}
         <Card className="w-full max-w-md bg-[#1A1A3A] border-[#3D3D6B] text-white rounded-xl overflow-hidden">

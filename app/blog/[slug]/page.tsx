@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import path from "path";
 import fs from "fs";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 interface BlogDetailPageProps {
   params: { slug: string };
@@ -45,6 +46,9 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16 w-full">
         <div className="w-full max-w-2xl bg-[#1A1A3A] border-[#3D3D6B] text-white rounded-xl overflow-hidden p-8">
           <ArticleComponent />
+        </div>
+        <div className="flex flex-col items-center md:items-start mb-8">
+          <SocialShareButtons />
         </div>
       </main>
       <Footer className="bg-[#0A0A1B] text-gray-400" />

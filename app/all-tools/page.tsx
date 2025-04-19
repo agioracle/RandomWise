@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { getAllTools } from "@/data/tools";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 export default function AllToolsPage() {
   const tools = getAllTools();
@@ -19,8 +20,10 @@ export default function AllToolsPage() {
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">All Tools</h1>
-        <p className="text-xl text-gray-300 mb-12">Explore our complete collection of random tools for quick decision-making.</p>
-
+        <p className="text-xl text-gray-300 mb-2">Explore our complete collection of random tools for quick decision-making.</p>
+        <div className="flex flex-col items-center md:items-start mb-8">
+          <SocialShareButtons />
+        </div>
         {/* Tools Grid */}
         <div className="container mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

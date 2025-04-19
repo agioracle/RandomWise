@@ -14,6 +14,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { useMediaQuery } from "../../hooks/use-media-query";
 import { getToolBySlug } from "@/data/tools";
 import { ToolIntroduction } from "@/components/tool-introduction";
+import SocialShareButtons from "@/components/SocialShareButtons";
 
 interface WheelOption {
   text: string;
@@ -58,7 +59,7 @@ const wheelTemplates = {
 export default function SpinTheWheelPage() {
   // Get current tool information
   const currentTool = getToolBySlug('spin-the-wheel');
-  
+
   // State for wheel spinning
   const [isSpinning, setIsSpinning] = useState<boolean>(false);
   const [result, setResult] = useState<string | null>(null);
@@ -310,9 +311,9 @@ export default function SpinTheWheelPage() {
 
   const startEditOption = (index: number) => {
     // Ensure icon is always a string, defaulting to empty string if undefined
-    setNewOption({ 
-      ...wheelOptions[index], 
-      icon: wheelOptions[index].icon || "" 
+    setNewOption({
+      ...wheelOptions[index],
+      icon: wheelOptions[index].icon || ""
     });
     setEditingIndex(index);
   };
@@ -365,7 +366,11 @@ export default function SpinTheWheelPage() {
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{currentTool?.name || 'Spinning your wheels?'}</h1>
-        <p className="text-xl text-gray-300 mb-12">{currentTool?.description || 'Let the wheel determine your next move!'}</p>
+        <p className="text-xl text-gray-300 mb-2">{currentTool?.description || 'Let the wheel determine your next move!'}</p>
+
+        <div className="flex flex-col items-center md:items-start mb-8">
+          <SocialShareButtons />
+        </div>
 
         <div className="flex flex-col md:flex-row w-full max-w-5xl gap-6">
           {isCustomizing && !isMobile ? (
