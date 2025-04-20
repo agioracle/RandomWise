@@ -7,7 +7,7 @@ import { SiDiscord, SiWhatsapp, SiTelegram, SiInstagram } from "react-icons/si";
 export default function SocialShareButtons() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [fullUrl, setFullUrl] = useState("https://ranwomwise.app");
+  const [fullUrl, setFullUrl] = useState("https://randomwise.app");
 
   useEffect(() => {
     if (typeof window !== "undefined") {

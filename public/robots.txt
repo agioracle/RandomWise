@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ranwomwise.app/sitemap.xml
+Sitemap: https://randomwise.app/sitemap.xml
