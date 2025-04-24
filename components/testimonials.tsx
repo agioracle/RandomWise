@@ -28,7 +28,7 @@ const testimonialsList = [
     avatar: "/images/avatars/avatar4.webp",
   },
   {
-    quote: "The 'Ask Decidely' feature is surprisingly insightful. It helped me think through a tough choice.",
+    quote: "I'm really looking forward to using the 'Ask Decidely' feature. It sounds like just what I need for making tough choices.",
     name: "Jessica R.",
     title: "Student",
     avatar: "/images/avatars/avatar5.webp",
