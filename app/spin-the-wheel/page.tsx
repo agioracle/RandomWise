@@ -15,6 +15,7 @@ import { useMediaQuery } from "../../hooks/use-media-query";
 import { getToolBySlug } from "@/data/tools";
 import { ToolIntroduction } from "@/components/tool-introduction";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import Head from "next/head";
 
 interface WheelOption {
   text: string;
@@ -360,6 +361,9 @@ export default function SpinTheWheelPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0D0D23]">
+      <Head>
+        <link rel="canonical" href="https://randomwise.app/spin-the-wheel" />
+      </Head>
       {/* Navigation */}
       <Navigation />
 

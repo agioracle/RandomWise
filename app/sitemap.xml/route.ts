@@ -23,7 +23,7 @@ export async function GET() {
 
   const urls = [
     ...staticPages.map((page) => `${BASE_URL}${page}`),
-    ...blogArticles.map((slug) => `${BASE_URL}/blog/articles/${slug}`),
+    ...blogArticles.map((slug) => `${BASE_URL}/blog/${slug}`),
   ];
 
   const lastmod = new Date().toISOString().split('T')[0];

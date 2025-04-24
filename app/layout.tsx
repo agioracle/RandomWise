@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Agi' }],
   publisher: 'RandomWise',
   alternates: {
-    canonical: 'https://randomwise.app',
+    canonical: '/',
   },
   openGraph: {
     title: 'RandomWise - Make Quick Decisions Using Free Random Tools',

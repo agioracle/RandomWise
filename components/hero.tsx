@@ -22,7 +22,7 @@ export function Hero() {
               className="px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary/90 transition flex items-center gap-2"
             >
               <LayoutGrid className="w-5 h-5 text-white" />
-              View All Tools
+              All Tools
             </a>
             <a
               href="/ask-dicidely"
