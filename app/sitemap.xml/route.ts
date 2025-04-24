@@ -12,6 +12,8 @@ export async function GET() {
     '/rock-paper-scissors',
     '/roll-dice',
     '/spin-the-wheel',
+    '/privacy-policy',
+    '/terms-of-service',
   ];
 
   // Blog articles (statically listed, can be automated with fs in a real backend)
