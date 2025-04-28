@@ -6,6 +6,22 @@ import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import { Metadata } from "next";
+
+const pageData = {
+  title: 'Blog - RandomWise',
+  description: 'Read latest articles and updates from RandomWise.',
+  keywords: ['blog', 'articles', 'RandomWise'],
+};
+
+export const metadata: Metadata = {
+  title: pageData.title,
+  description: pageData.description,
+  keywords: pageData.keywords,
+  alternates: {
+    canonical: '/blog',
+  },
+};
 
 // Helper to get all article filenames
 function getArticleSlugs() {

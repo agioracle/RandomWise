@@ -28,6 +28,7 @@ const WhyUseRandomToolsArticle: React.FC = () => (
       <li>When you want to break out of your comfort zone and try something new.</li>
     </ul>
     <p className="mb-4">Try using a random tool the next time you’re facing a tough choice. You might be surprised at how liberating (and fun) it can be. Explore the random tools available on our site and make your next decision the easy way!</p>
+    <p className="mb-4">Visit <a href="https://randomwise.app/all-tools" target="_blank" rel="noopener noreferrer" className="text-primary">RandomWise</a> now to make decisions.</p>
     <p className="mt-6 text-gray-400 text-xs">— The RandomWise Team</p>
   </article>
 );

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,6 +6,22 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { getAllTools } from "@/data/tools";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import { Metadata } from "next";
+
+const pageData = {
+  title: 'All Tools - RandomWise',
+  description: 'Explore our complete collection of random tools for quick decision-making.',
+  keywords: ['coin flip', 'spin wheel', 'roll dice', 'random number generator', 'rock paper scissors', 'fortune teller', 'card picker'],
+};
+
+export const metadata: Metadata = {
+  title: pageData.title,
+  description: pageData.description,
+  keywords: pageData.keywords,
+  alternates: {
+    canonical: '/all-tools',
+  },
+};
 
 export default function AllToolsPage() {
   const tools = getAllTools();
@@ -19,8 +33,8 @@ export default function AllToolsPage() {
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 mt-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">All Tools</h1>
-        <p className="text-xl text-gray-300 mb-2">Explore our complete collection of random tools for quick decision-making.</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{pageData.title}</h1>
+        <p className="text-xl text-gray-300 mb-2">{pageData.description}</p>
         <div className="flex flex-col items-center md:items-start mb-8">
           <SocialShareButtons />
         </div>

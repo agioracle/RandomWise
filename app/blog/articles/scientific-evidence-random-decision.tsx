@@ -21,6 +21,7 @@ const ScientificEvidenceArticle: React.FC = () => (
       <li><strong>Fairness and Objectivity:</strong> In science and statistics, random sampling is used to avoid bias. Applying similar principles to personal or group decisions can help ensure fairness and impartiality.</li>
     </ul>
     <p className="mb-4">While random tools shouldn’t replace thoughtful decision-making for every situation, they can be surprisingly effective for breaking ties, overcoming indecision, and making everyday choices less stressful. Next time you’re stuck, try using a random tool—you might just make a better decision!</p>
+    <p className="mb-4">Visit <a href="https://randomwise.app/all-tools" target="_blank" rel="noopener noreferrer" className="text-primary">RandomWise</a> now to make decisions.</p>
     <p className="mt-6 text-gray-400 text-xs">— The RandomWise Team</p>
   </article>
 );

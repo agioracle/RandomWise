@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://randomwise.app'),
   title: 'RandomWise - Make Quick Decisions Using Free Random Tools',
   description: 'make decisions easy & fun with our complete collection of free random tools',
-  keywords: 'random tools, quick decisions, easy decisions, fun decisions, randomizing tools, decision-making tools, random generator, randomizer, coin flip, spin wheel, roll dice, random number generator, rock paper scissors, fortune teller, card picker',
+  keywords: 'quick decision tools, make decision tools, decision-making tools, easy decision tools, fun decision tools, random tools',
   authors: [{ name: 'Agi' }],
   publisher: 'RandomWise',
   alternates: {
