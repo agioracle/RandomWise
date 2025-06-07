@@ -10,6 +10,15 @@ export async function generateMetadata(): Promise<Metadata> {
     title: currentTool?.name + ' - RandomWise',
     description: currentTool?.description,
     keywords: currentTool?.keywords ? currentTool.keywords.join(', ') : undefined,
+    alternates: {
+      canonical: '/flip-coin',
+    },
+    openGraph: {
+      title: currentTool?.name + ' - RandomWise',
+      description: currentTool?.description,
+      url: 'https://randomwise.app/flip-coin',
+      siteName: 'RandomWise',
+    },
   };
 }
 
