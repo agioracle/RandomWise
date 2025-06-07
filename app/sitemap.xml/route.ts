@@ -11,7 +11,7 @@ export async function GET() {
     '/random-number-generator',
     '/rock-paper-scissors',
     '/roll-dice',
-    '/spin-the-wheel',
+    '/randomizer-wheel',
     '/privacy-policy',
     '/terms-of-service',
   ];
@@ -21,6 +21,8 @@ export async function GET() {
     'introduction',
     'scientific-evidence-random-decision',
     'why-use-random-tools',
+    'spin-your-way-to-decisions',
+    'rolling-through-history',
   ];
 
   const urls = [
