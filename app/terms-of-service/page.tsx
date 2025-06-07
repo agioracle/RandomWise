@@ -44,7 +44,7 @@ export default function TermsOfServicePage() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-2 text-white">7. Contact Us</h2>
           <p className="mb-4 text-gray-300">
-            If you have any questions about these Terms, please contact us at support@example.com.
+            If you have any questions about these Terms, please contact us at <a href="mailto:info@randomwise.app" className="text-primary">info@randomwise.app</a>.
           </p>
         </div>
       </main>
