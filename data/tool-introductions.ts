@@ -16,22 +16,23 @@ type ToolIntroductions = {
 
 export const toolIntroductions: ToolIntroductions = {
   "flip-coin": {
-    title: "Virtual Coin Flip: Random Decision Making Tool Online",
+    title: "Flip Coin Online: Free Coin Flip Tool for Random Decision Making",
     paragraphs: [
-      "Our free online coin flip tool is the perfect random decision maker for quick yes/no choices. Whether you're deciding who goes first in a game, settling a friendly dispute, or just need a fair way to make binary decisions, our virtual coin tosser delivers truly random results every time.",
-      "Unlike physical coins which may have manufacturing biases, our digital coin flip decision tool uses a cryptographically secure random number generator to ensure completely fair and unbiased results - giving you a perfect 50/50 chance between heads and tails.",
-      "With additional features like the \"repeat until heads\" option and optional sound effects, this random decision making tool is perfect for statistics demonstrations, probability experiments, or just making everyday choices. No more searching for a physical coin - just click the toss button and get instant random decisions!"
+      "Flip coin online with our free coin flip tool that provides instant random decision making for all your yes/no choices. Whether you need to toss coin for game decisions, settle disputes, or make binary choices, our random coin generator delivers truly fair results every time you flip coin online.",
+      "Unlike physical coins that may have manufacturing biases, our digital coin flip tool uses advanced random number generation to ensure completely unbiased coin flip results. Get a perfect 50/50 chance between heads and tails every time you toss coin with our reliable random coin decision making system.",
+      "With features like the \"repeat until heads\" option and optional sound effects, this coin flip decision making tool is perfect for statistics demonstrations, probability experiments, or everyday choices. No need to search for a physical coin - just flip coin instantly with our toss coin generator and get random coin results for effective decision making!"
     ],
     howToUse: {
-      title: "How to Use the Coin Flip Decision Tool",
+      title: "How to Flip Coin Online for Decision Making",
       steps: [
-        "Click the \"Toss\" button to flip the virtual coin and make a random decision",
-        "View the result - either heads or tails - to determine your decision outcome",
-        "Toggle \"Repeat until heads\" if you want automatic flipping until heads appears",
-        "Enable sound effects for a more immersive decision-making experience"
+        "Click the \"Toss\" button to flip coin and generate a random coin result for decision making",
+        "View the coin flip outcome - either heads or tails - to determine your decision",
+        "Toggle \"Repeat until heads\" if you want automatic coin flip sequences for complex decision making",
+        "Enable sound effects for a more immersive flip coin experience",
+        "Use the toss coin feature repeatedly for multiple decision making scenarios"
       ]
     },
-    conclusion: "Try our coin flipper decision tool today for all your random choice needs - it's completely free, works on all devices, and requires no downloads or installations! Make quick, fair decisions with just a click."
+    conclusion: "Whether you need quick decision making solutions or want to toss coin for fair choices, our flip coin tool provides the perfect coin flip experience. Try our free random coin generator today - it's completely free, works on all devices, and delivers reliable coin flip results for all your decision making needs!"
   },
   "random-number-generator": {
     title: "Random Number Generator: Decision Making Tool for Any Range",
@@ -53,64 +54,64 @@ export const toolIntroductions: ToolIntroductions = {
     conclusion: "Whether you're a student, researcher, game developer, or just need a fair way to make random selections and decisions, our random number generator provides the perfect combination of simplicity, speed, and true randomness - all for free and with no registration required! Make data-driven decisions with confidence using our random tools."
   },
   "roll-dice": {
-    title: "Online Dice Roller: Random Decision Tool for Games & Choices",
+    title: "Roll Dice Online: Free Random Dice Roller for Board Games & Decisions",
     paragraphs: [
-      "Our free online dice roller provides a realistic virtual dice experience for all your random decision-making needs, tabletop gaming, RPG sessions, and choice determinations. Choose from multiple dice types including D4, D6, D8, D10, D12, and D20 to simulate any game scenario or generate random outcomes for decisions.",
-      "Unlike physical dice that can be lost, damaged, or biased, our digital dice decision tool uses advanced random number generation to ensure completely fair and balanced results every time. The realistic 3D animations and optional sound effects create an immersive experience that mimics rolling real dice while providing reliable random decisions.",
-      "With support for rolling multiple dice simultaneously and keeping a history of your previous rolls, this random decision-making tool is perfect for Dungeons & Dragons, Pathfinder, board games, classroom activities, or any situation where you need random outcomes from different types of dice to guide your choices."
+      "Roll dice online with our free random dice roller that provides realistic virtual dice for all your gaming and decision-making needs. Whether you want to roll a dice for board games, roll the dice for RPG sessions, or use random roll generation for quick decisions, our dice roll tool supports 6 different dice types including D4, D6, D8, D10, D12, and D20.",
+      "Unlike physical dice that can be lost or biased, our randomized dice tool uses advanced algorithms to ensure fair dice roll results every time you roll dice random. The realistic 3D animations and optional sound effects create an immersive experience when you roll a die, making it the perfect random dice roller for both casual gaming and serious tabletop sessions.",
+      "Roll multiple dice simultaneously with our random roll dice feature and keep track of your dice roll history. This dice random generator is ideal for Dungeons & Dragons, Pathfinder, board games, classroom activities, or any time you need to roll dies for random outcomes and decision making."
     ],
     howToUse: {
-      title: "How to Use the Dice Roller Decision Tool",
+      title: "How to Roll Dice Online with Our Random Dice Roller",
       steps: [
-        "Select your desired dice type (D4, D6, D8, D10, D12, or D20) for your random decision",
-        "Choose how many dice you want to roll at once for complex decision making",
-        "Click the 'Roll' button to throw the dice and generate your random decision",
-        "View your results displayed with realistic 3D dice to see your decision outcome",
-        "Enable sound effects for a more immersive decision-making experience",
-        "Check your roll history at the bottom of the page to track previous decisions"
+        "Select your dice type (D4, D6, D8, D10, D12, or D20) to roll a dice of your choice",
+        "Choose how many dice to roll at once for complex random roll scenarios",
+        "Click the 'Roll' button to roll the dice and generate your random dice results",
+        "View your dice roll outcomes displayed with realistic 3D animations",
+        "Enable sound effects for a more immersive roll dice experience",
+        "Check your roll history to track all previous dice roll results"
       ]
     },
-    conclusion: "Whether you're a dungeon master running a campaign, a board game enthusiast missing a die, or just need a fair way to make random decisions, our dice roller decision tool provides a convenient, free alternative to physical dice with all the features you need for any game or decision-making application!"
+    conclusion: "Whether you're a dungeon master, board game player, or need to roll a die for quick decisions, our online dice roller provides the perfect solution to roll dice random with professional results. Try our free random dice roller today - no downloads required, works on all devices, and delivers fair dice roll outcomes every time you roll the dice!"
   },
-  "spin-the-wheel": {
-    title: "Spin the Wheel: Custom Random Decision Maker & Choice Picker",
+  "randomizer-wheel": {
+    title: "Randomizer Wheel: Free Online Wheel Randomizer & Spin Generator",
     paragraphs: [
-      "Our free online wheel spinner provides a fun and interactive way to make random decisions and selections from custom options. Whether you're choosing a winner for a contest, deciding what to eat for dinner, selecting a student in class, or making any group decision, our customizable decision wheel makes the process fair, engaging, and truly random.",
-      "Unlike basic random selectors, our spin wheel decision tool offers a visually appealing experience with a realistic spinning animation and customizable options. You can personalize each segment with your own text, colors, and even icons to create a decision-making wheel that perfectly fits your specific choice requirements.",
-      "The wheel supports up to 8 different options, making it a versatile random decision tool for various scenarios from simple yes/no choices to complex multi-option decisions. Watch as the wheel spins with decreasing speed before landing on your randomly selected result, providing a transparent and exciting decision-making process!"
+      "Our free online randomizer wheel provides an interactive way to make random selections from custom options. Whether you need a wheel randomizer for contests, a randomiser wheel for classroom activities, or a spin the wheel generator for group decisions, our customizable random generator wheel makes the process fair, engaging, and truly random.",
+      "Unlike basic random selectors, our wheel randomiser offers a visually appealing experience with realistic spinning animation and fully customizable options. You can personalize each segment with your own text and colors to create the perfect randomizer spin tool that fits your specific selection requirements, making it the ultimate spin the wheel randomizer.",
+      "This randomiser wheel supports up to 8 different options, making it a versatile spin randomizer for various scenarios from simple yes/no choices to complex multi-option decisions. Watch as the wheel randomizer spins with decreasing speed before landing on your randomly selected result, providing a transparent and exciting randomizer spin experience!"
     ],
     howToUse: {
-      title: "How to Use the Spin the Wheel Decision Tool",
+      title: "How to Use the Randomizer Wheel Generator",
       steps: [
-        "Customize your decision wheel by clicking the 'Customize' button",
-        "Add, edit, or remove options with your own text and colors to match your decision needs",
-        "Click the 'Spin' button to start the wheel spinning and initiate the random decision process",
-        "Watch as the wheel slows down and lands on a random selection to reveal your decision",
-        "Enable sound effects for a more immersive decision-making experience",
-        "Use predefined templates for common decision scenarios like Yes/No choices"
+        "Customize your randomizer wheel by clicking the 'Customize' button to set up your spin randomizer",
+        "Add, edit, or remove options with your own text and colors for your wheel randomizer",
+        "Click the 'Spin' button to start the randomiser wheel spinning and generate random selections",
+        "Watch as the wheel randomizer slows down and lands on a random selection to reveal your result",
+        "Enable sound effects for a more immersive randomizer spin experience",
+        "Use predefined templates for common scenarios with our spin the wheel generator"
       ]
     },
-    conclusion: "Whether you're a teacher looking to engage students, a family trying to decide on movie night picks, or a group of friends making a random selection, our spin wheel decision tool brings an element of fun and fairness to any decision-making process. Try it now - it's completely free, works on all devices, and requires no registration! Make random decisions with style and excitement."
+    conclusion: "Whether you're a teacher using a randomiser wheel for student selection, a family needing a wheel randomizer for decisions, or a group using our spin randomizer for fair choices, our randomizer wheel brings excitement and fairness to any selection process. Try our free spin the wheel randomizer today - it's completely free, works on all devices, and delivers truly random results every time you use the wheel randomiser!"
   },
   "rock-paper-scissors": {
-    title: "Rock Paper Scissors Online: Random Decision Game & Choice Maker",
+    title: "Rock Paper Scissors Online: Free Rock Paper Scissors Game for Quick Decisions",
     paragraphs: [
-      "Our free online Rock Paper Scissors game offers a modern take on the classic hand game that's been used for centuries to settle disputes, make random decisions, or simply have fun. Play against our computer opponent with realistic animations and keep track of your wins, losses, and draws while using this timeless decision-making tool.",
-      "Unlike playing with friends where bias or patterns might emerge, our computer opponent uses true randomness to ensure completely fair decision-making gameplay every time. The intuitive interface makes it easy to select your move with a single click, and the animated results create an engaging experience for making random choices.",
-      "Whether you're using it as a decision tool to determine who does the dishes, teaching children about game theory and random choice, or just looking for a quick distraction, our Rock Paper Scissors decision maker provides endless entertainment with no downloads or installations required."
+      "Play Rock Paper Scissors online with our free Rock Paper Scissors game that offers a modern take on the classic hand game used for centuries to settle disputes and make quick decisions. Our online Rock Paper Scissors tool provides a fair way to resolve conflicts, with realistic animations and score tracking for this timeless Rock Paper Scissors experience.",
+      "Unlike playing Rock Paper Scissors with friends where patterns might emerge, our computer opponent uses true randomness to ensure completely fair Rock Paper Scissors gameplay every time. The intuitive Rock Paper Scissors interface makes it easy to select your move with a single click, creating an engaging Rock Paper Scissors experience for making random choices and settling disputes.",
+      "Whether you're using Rock Paper Scissors as a decision tool to determine who does chores, teaching children about game theory through Rock Paper Scissors, or need a quick Rock Paper Scissors game for entertainment, our online Rock Paper Scissors provides endless fun with no downloads required. Play Rock Paper Scissors anytime for fair decision-making!"
     ],
     howToUse: {
-      title: "How to Use Rock Paper Scissors for Random Decisions",
+      title: "How to Play Rock Paper Scissors Online for Quick Decisions",
       steps: [
-        "Click on Rock, Paper, or Scissors to make your selection in the decision process",
-        "Watch as the computer opponent makes its random choice",
-        "See the result displayed with clear win/lose/draw indication to determine your decision outcome",
-        "Track your decision statistics at the bottom of the screen",
-        "Enable sound effects for a more immersive decision-making experience",
-        "Click 'Play' to start a new round with a random selection for quick decisions"
+        "Click on Rock, Paper, or Scissors to make your Rock Paper Scissors selection",
+        "Watch as the computer opponent makes its random Rock Paper Scissors choice",
+        "See the Rock Paper Scissors result with clear win/lose/draw indication for your decision",
+        "Track your Rock Paper Scissors statistics and game history at the bottom",
+        "Enable sound effects for a more immersive Rock Paper Scissors gaming experience",
+        "Click 'Play' to start a new Rock Paper Scissors round for additional decision-making"
       ]
     },
-    conclusion: "Rock Paper Scissors is more than just a simple game - it's a powerful random decision-making tool used in psychology studies, game theory discussions, and even international tournaments! Our online version gives you all the fun of the traditional game with added features like statistics tracking and sound effects. Play a quick round whenever you need to make a random choice or decision with a touch of fun and nostalgia!"
+    conclusion: "Rock Paper Scissors is more than just a simple game - it's a powerful decision-making tool used in psychology studies, game theory, and international Rock Paper Scissors tournaments! Our online Rock Paper Scissors game gives you all the fun of the traditional Rock Paper Scissors experience with modern features like statistics tracking and sound effects. Play Rock Paper Scissors whenever you need to make a random choice or settle a dispute with this classic Rock Paper Scissors game!"
   }
   // Add more tool introductions here in the future
 };

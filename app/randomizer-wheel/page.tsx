@@ -1,10 +1,10 @@
 import { getToolBySlug } from "@/data/tools";
 import type { Metadata } from 'next';
-import RandomNumberGeneratorClient from './random-number-generator-client';
+import RandomizerWheelClient from './randomizer-wheel-client';
 
 // Generate metadata for this page
 export async function generateMetadata(): Promise<Metadata> {
-  const currentTool = getToolBySlug('random-number-generator');
+  const currentTool = getToolBySlug('randomizer-wheel');
 
   return {
     title: currentTool?.name + ' - RandomWise',
@@ -13,6 +13,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RandomNumberGeneratorPage() {
-  return <RandomNumberGeneratorClient />;
+export default function RandomizerWheelPage() {
+  return <RandomizerWheelClient />;
 }

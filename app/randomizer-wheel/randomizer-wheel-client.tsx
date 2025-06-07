@@ -15,7 +15,6 @@ import { useMediaQuery } from "../../hooks/use-media-query";
 import { getToolBySlug } from "@/data/tools";
 import { ToolIntroduction } from "@/components/tool-introduction";
 import SocialShareButtons from "@/components/SocialShareButtons";
-import Head from "next/head";
 
 interface WheelOption {
   text: string;
@@ -57,9 +56,9 @@ const wheelTemplates = {
   ],
 };
 
-export default function SpinTheWheelPage() {
+export default function RandomizerWheelClient() {
   // Get current tool information
-  const currentTool = getToolBySlug('spin-the-wheel');
+  const currentTool = getToolBySlug('randomizer-wheel');
 
   // State for wheel spinning
   const [isSpinning, setIsSpinning] = useState<boolean>(false);
@@ -361,9 +360,6 @@ export default function SpinTheWheelPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0D0D23]">
-      <Head>
-        <link rel="canonical" href="https://randomwise.app/spin-the-wheel" />
-      </Head>
       {/* Navigation */}
       <Navigation />
 
@@ -643,7 +639,7 @@ export default function SpinTheWheelPage() {
       </main>
 
       {/* SEO Introduction */}
-      <ToolIntroduction slug="spin-the-wheel" />
+      <ToolIntroduction slug="randomizer-wheel" />
 
       {/* Footer */}
       <Footer className="bg-[#0A0A1B] text-gray-400" />
